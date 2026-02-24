@@ -131,6 +131,12 @@
 									unset($tmp_url, $tmp_path);
 								}
 								break;
+						//footer: allow html
+							case 'footer':
+								if (isset($setting['text']) && $setting['text'] != '') {
+									$settings_array['theme'][$subcategory] = $setting['text'];
+								}
+								break;
 						//otherwise
 							default:
 								if (isset($setting['text']) && $setting['text'] != '') {
